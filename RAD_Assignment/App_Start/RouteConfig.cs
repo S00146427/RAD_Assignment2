@@ -18,7 +18,7 @@ namespace RAD_Assignment
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
 
-                //Enda McGoldrick S00146427
+                //Enda McGoldrick S00146427//
             );
         }
     }
