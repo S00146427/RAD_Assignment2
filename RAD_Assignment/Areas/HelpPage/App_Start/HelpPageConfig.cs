@@ -17,7 +17,7 @@ using System.Web.Http.OData;
 #endif
 
 namespace RAD_Assignment.Areas.HelpPage
-{
+{//
     /// <summary>
     /// Use this class to customize the Help Page.
     /// For example you can set a custom <see cref="System.Web.Http.Description.IDocumentationProvider"/> to supply the documentation

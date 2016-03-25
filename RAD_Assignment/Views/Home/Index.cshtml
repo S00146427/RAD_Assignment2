@@ -1,24 +1,33 @@
-﻿<div class="jumbotron">
-    <h1>Pick a Character</h1>
-    <input type="button" class="btn btn-primary" value="Get Character" onclick="getCharacter();" />
-    
-</div>
-<div class="row">
-    <div class="col-md-4">
-        <h2>Here's the Characters</h2>
-        <select id="CharacterLst" size="10" onchange="SelectedCharacter()" style="width:100%" />
-    </div>
-    
-        
-</div>
+﻿@model IEnumerable<RAD_Assignment.Models.CharacterTBL>
 
-<script type="text/javascript">
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CharacterName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActorName)
+        </th>
+        <th></th>
+    </tr>
 
-    var uri = "http://www.anapioficeandfire.com/api/characters";
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CharacterName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActorName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
 
-    function GetGameOfThroneCharacters() {
-
-    }
-
-
-</script>
+</table>

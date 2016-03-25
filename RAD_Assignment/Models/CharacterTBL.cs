@@ -13,9 +13,10 @@ namespace RAD_Assignment.Models
     using System.Collections.Generic;
     
     public partial class CharacterTBL
-    {
+    {//
         public int Id { get; set; }
         public string CharacterName { get; set; }
         public string ActorName { get; set; }
+        public string HouseName { get; set; }
     }
 }
